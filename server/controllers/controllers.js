@@ -1,5 +1,4 @@
 import {Questions} from "../models/modelSchema.js";
-import question from "../data/data.js"
 
 export async function getQuestions(req, res){
     try {
