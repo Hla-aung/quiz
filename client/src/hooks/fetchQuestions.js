@@ -10,7 +10,7 @@ export const useFetchQuestions = () => {
   useEffect(() => {
     (async () => {
       const questions = await (
-        await axios.get("http://localhost:3000/api/questions")
+        await axios.get("https://quiz-api-8x5m.onrender.com/api/questions")
       ).data;
 
       const i = Math.round(Math.random() * (questions.length - 1));
