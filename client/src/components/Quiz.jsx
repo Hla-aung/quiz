@@ -22,7 +22,7 @@ const Quiz = () => {
   const dispatch = useDispatch();
 
   const que = useSelector((state) => state.result.questions);
-  const q = que.questions.questions;
+  const q = que?.questions?.questions;
   const handleChange = (e) => {
     setValue(e.target.value);
   };
@@ -45,13 +45,19 @@ const Quiz = () => {
       justifyContent={"center"}
       alignItems={"center"}
       key={q[next]?.id}
+      paddingX={3}
     >
       <Stack direction={"column"} alignItems={"flex-start"} mb={"20px"}>
         <Typography
-          variant="h3"
           color={"primary"}
           fontWeight={"bold"}
           gutterBottom
+          sx={{
+            fontSize: {
+              md: 30,
+              xs: 25
+            }
+          }}
         >
           {q[next]?.question}
         </Typography>
@@ -71,7 +77,7 @@ const Quiz = () => {
           </RadioGroup>
         </FormControl>
       </Stack>
-      {next < q.length - 1 ? (
+      {next < q?.length - 1 ? (
         <Button
           onClick={handleClick}
           variant="contained"

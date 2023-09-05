@@ -26,32 +26,48 @@ const Result = () => {
   };
  
   return (
-     (<Stack
+     <Stack
       direction={"column"}
       height={"90vh"}
       justifyContent={"center"}
       alignItems={"center"}
+      paddingX={3}
     >
-      <Typography variant="h2" color="primary" gutterBottom>
+      <Typography color="primary" gutterBottom sx={{
+        fontSize: {
+          md: 50,
+          xs: 30
+        }
+      }}>
         {n < getResult.length / 2
           ? `SORRY! ${user}`
           : `CONGRATULAIONS! ${user}`}
       </Typography>
-      <Typography variant="h4" gutterBottom>
+      <Typography gutterBottom sx={{
+        fontSize: {
+          md: 30,
+          xs: 20
+        }
+      }}>
         {n < getResult.length / 2
           ? "You have failed. Please try again."
           : "You have passed."}
       </Typography>
       <Typography
-        variant="h5"
         mb={"30px"}
+        sx={{
+          fontSize: {
+            md: 30,
+            xs: 20
+          }
+        }}
       >{`Your score is ${n}/${getResult.length}.`}</Typography>
       <Link to={"/"} element={<Home />} onClick={setReset}>
         <Button variant="contained" endIcon={<HomeIcon />}>
           Back to Home
         </Button>
       </Link>
-    </Stack>) 
+    </Stack>
   );
 };
 

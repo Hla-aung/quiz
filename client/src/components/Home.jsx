@@ -60,7 +60,6 @@ const Home = () => {
       height={"90vh"}
     >
       <Typography
-        variant="h1"
         mb={"20px"}
         sx={{
           fontWeight: "bold",
@@ -68,6 +67,10 @@ const Home = () => {
           border: "#2196f3 solid 3px",
           borderRadius: "10px",
           padding: "10px",
+          fontSize: {
+            md: 50,
+            xs: 30
+          }
         }}
       >
         Quiz App
