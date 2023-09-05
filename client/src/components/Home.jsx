@@ -28,7 +28,6 @@ const Home = () => {
   const dispatch = useDispatch();
 
   const [data] = useFetchQuestions();
-  console.log(data)
   const handleClick = () => {
     if (inputRef.current.value) {
       dispatch(setUser(inputRef.current.value));

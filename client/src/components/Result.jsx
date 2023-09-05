@@ -8,9 +8,6 @@ import Home from "./Home";
 const Result = () => {
   const getResult = useSelector((state) => state.result.result);
   const getCorrect = useSelector((state) => state.result.correct);
-  const getQuestions = useSelector((state) => state.result.questions);
-  const q = getQuestions.questions.questions;
-  console.log(q)
   const user = useSelector((state) => state.result.userID);
   const dispatch = useDispatch();
   
